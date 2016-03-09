@@ -24,7 +24,7 @@
             // and test its href against the url pathname
             checkString = url.match($(this).attr('href'));
             if ((checkString != null && $(this).attr('href') != '/') || (url == $(this).attr('href'))) {
-                $(this).addClass(o.className);
+                $(this).parents(o.parent).addClass(o.className);
 
                 if(index > 0 && o.homeFirst) {
                     $(_this).find(o.find).first().removeClass(o.className);
